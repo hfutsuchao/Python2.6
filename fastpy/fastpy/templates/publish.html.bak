@@ -1,0 +1,76 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>游侠传运营平台</title>
+	</head>
+	<body>
+		<form action="/store.upload" method="post" enctype="multipart/form-data" onsubmit="return validate()">
+			<!-- 上传文件-->
+				<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" summary="upload pictures">
+                    <tr><br/></tr>
+                    <tr>
+                        <td></td>
+                        <td>说明：版本号格式ver1.ver2.ver3;<br/>
+                            客户端判断：如果ver1变化则需要重装，ver2变化需要更新资源，只是ver3变化不需要更新</td>
+                    </tr>
+                    <tr>
+						<td width="30%" align="right" class="title"> 已有资源： </td>
+                        <td>
+                            <a target="_blank" href="$root_url">$root_url</a>
+                        </td>
+					</tr>
+				    <tr>
+                        <td width="30%" align="right" class="title"> 新增类型：
+                        </td>
+                        <td>
+                            <select id="updatetype" name="updatetype">
+                                <option value="ver1">ver1</option>
+                                <option value="ver2" selected>ver2</option>
+                                <option value="ver3">ver3</option>
+                            </select>
+                            (选择版本段，上传成功后会自动为这个段+1)
+                        </td>
+					</tr>
+				    <tr>
+						<td width="30%" align="right" class="title"> 平台名称： </td>
+                        <td>
+                            <select id="platform" name="platform">
+                                <option value="android">android</option>
+                                <option value="ios">ios</option>
+                            </select>
+                        </td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+						<input name="submit" type="submit" value="发布版本" />
+						</td>
+					</tr>
+				</table>
+		</form>
+	</body>
+</html>
+<script type="text/javascript">
+	function imgChange(next,cur) {
+        var filename = cur.value;
+        var strtype = filename.substring(filename.length-4,filename.length);
+        if (strtype != ".zip") {
+            alert("妈蛋！都说了要.zip文件");
+            return false;
+        }
+        if (next != null) {
+			document.getElementById(next).style.display = "";
+        }
+        return true;
+	}
+
+	function validate() {
+        var platform = document.getElementById("platform");
+        if (platform.value == "") {
+            alert("妈蛋，你填个平台名字会死啊");
+            return false;
+        }
+	}
+</script>

@@ -1,0 +1,10 @@
+addrCity,huxing_shi,huxing_ting,huxing_wei,louceng,rentKW	
+addrDistrict,house_type,chaoxiang,louceng,share	
+addrStreet,minzhaiDescription,minzhai_type,rentKW	
+addrXiaoqu,share	
+addrXiaoqu,rent	
+addrStreet,zhuangxiu,huxing_shi,rent	
+addrDistrict,other,zhuangxiu,huxing_shi,rent	
+addrXiaoqu,louceng,huxing_shi,sell	
+addrStreet,other,huxing_shi,huxing_ting,rent	
+addrXiaoqu,zhuangxiu,chaoxiang,share	

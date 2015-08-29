@@ -1,0 +1,3 @@
+stockNum agreementName	numbers	AVGPrice
+bidu	BIDU140222C00160000	2	10
+bidu	BIDU140222C00170000	3	15

@@ -1,0 +1,4 @@
+cheliangpeijian	1	1	1	汽车方向锁
+cheliangpeijian	1	1	1	农用三轮
+cheliangpeijian	1	1	1	脚垫
+cheliangpeijian	1	1	1	现代伊兰特的CD

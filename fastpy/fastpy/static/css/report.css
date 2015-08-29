@@ -1,0 +1,99 @@
+body{margin:0;text-align: center;}
+.container{padding:10px 70px;}
+h1{padding:10px 70px;margin-top:0;background-color:#f3f3f3;border-top:1px solid #ddd;border-bottom:1px solid #ddd;text-shadow:1px 2px 2px #ccc}
+h2{margin:10px}
+.hide{display:none;}
+tbody th{text-align:center;}
+th { background-color:#f4f4f4; text-align:center} 
+thead th{text-align:center}
+caption {margin: 0 0 .5em; font-weight: bold; font-size: 1em; }
+
+.wrapper{margin:10px auto;min-width:1000px;text-align: center}
+p.desc{color:#999}
+#datepicker{
+  font-size: .9em;
+-webkit-margin-before: 0.67em;
+-webkit-margin-after: 0.67em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+font-weight: bold;
+border:none;
+background: #f3f3f3;
+text-shadow:1px 2px 2px #ccc;
+text-decoration: underline;
+cursor: pointer;
+width:7em;
+}
+table.tablesorter tbody td.ui-selecting,table.tablesorter tfoot td.ui-selecting { background: #FECA40; }
+table.tablesorter tbody td.ui-selected,table.tablesorter tfoot td.ui-selected { background: #F39814; color: white; }
+h1 a{color:#000;}
+/* tables */
+table.tablesorter {
+  background-color: #CDCDCD;
+  margin:10px auto 15px auto;
+  text-align: left;
+  min-width: 600px;
+  border-collapse: separate;
+  border-spacing: 1px;
+}
+caption a{
+color: #999;
+font-size: .8em;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+  background-color: #e6EEEE;
+  border: 1px solid #FFF;
+  font-size: 8pt;
+  padding: 4px;
+  min-width: 50px;
+  padding-right: 15px;
+  white-space: nowrap;
+}
+table.tablesorter thead tr .header {
+  background-image: url(bg.gif);
+  background-repeat: no-repeat;
+  background-position: center right;
+  cursor: pointer;
+}
+table.tablesorter tbody td {
+  padding: 4px;
+  background-color: #FFF;
+  vertical-align: top;
+  font-family: Verdana,Arial,"微软雅黑"sans-serif;
+  text-align: right;
+}
+table.tablesorter tfoot td{
+  background: #E6EEEE;
+  padding: 4px;
+  font-family: Verdana,Arial,"微软雅黑"sans-serif;
+  text-align: right;
+}
+table.tablesorter tbody tr.odd td {
+  
+}
+table.tablesorter thead tr .headerSortUp {
+  background-image: url(../images/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+  background-image: url(../images/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #8dbdd8;
+}
+table.tablesorter td.row_key{font-weight: bold;text-align: left;white-space: nowrap;}
+.decreased{color:green}
+.increased{color:red}
+.subreport{
+  list-style-type: none;
+}
+.subreport ins{
+  background-position: -56px -19px;
+  display: inline-block;
+  margin-right: 3px;
+  height: 16px;
+  width: 16px;
+  background-image: url(../js/themes/default/d.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  overflow: hidden;
+}

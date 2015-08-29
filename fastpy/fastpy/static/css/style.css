@@ -1,0 +1,185 @@
+body{margin:0;font-family: "微软雅黑",Verdana,Arial,sans-serif/*{ffDefault}*/; font-size: 1em/*{fsDefault}*/;}
+.container{padding:10px 70px;}
+h1{padding:10px 70px;margin-top:20px;padding-left: 130px;background-color:#f3f3f3;border-top:1px solid #ddd;border-bottom:1px solid #ddd;text-shadow:1px 2px 2px #ccc}
+h2{margin:10px}
+.hide{display:none;}
+tbody th{text-align:center;}
+#placeholder{padding:10px;}
+th { background-color:#f4f4f4; text-align:center} 
+thead th{text-align:center}
+caption {margin: 0 0 .5em; font-weight: bold; font-size: 1.5em; }
+
+#dialog label, #dialog input { display:block; }
+#dialog label { margin-top: 0.5em; }
+#dialog input, #dialog textarea { width: 95%; }
+#tabs { margin-top: 1em; }
+#tabs li .ui-icon-close,#tabs li .ui-icon-arrow-4-diag,#tabs li .ui-icon-gear { float: right; margin: 0; cursor: pointer; }
+#add_tab { cursor: pointer; }
+.ui-tabs .ui-tabs-panel{overflow:hidden;}
+.report_config{padding:5px;border-bottom: solid 1px #ddd;margin:4px;min-height: 10px;background: #f9f9f9}
+.action_area{}
+
+.query_group{
+	list-style-type:upper-alpha;margin:0;
+}
+.ui-button{
+	 margin-right: 2px;
+}
+
+.output-pane{vertical-align:top;}
+.output-pane table{width:100%}
+.expression{width:600px;}
+.mini-query-builder .expression{width: 298px;}
+.group_expr{width:510px;}
+#analysis_group_by .group_expr{width:310px;}
+.date{width:110px;text-align:centers;}
+.number{width:50px;text-align:right;}
+.exec_code_map,.exec_code_reduce,.exec_code_finalize{width: 600px;}
+.exec_code_result{padding: 20px 40px 40px 80px;}
+.task_history{padding: 20px 40px 5px 80px;}
+#user_detail_pane .task_history{padding: 0;}
+#user_detail_pane .task_history_selector{width:290px;}
+
+.history_query{position:absolute;left: 70px;top: 90px;z-index: 1000;}
+
+.time-millis,.time-exec{font-size:11px;color:#aaa}
+.exec_hint{color:#ff5500;}
+.count-limit{font-size:11px;color:blue}
+.output-pane .count-limit{margin-left:10px;}
+.table-title{margin-right:40px;font-weight:bold;}
+.summary-block{float:left;margin:10px;}
+.summary-block .output-count{font-size:11px;color:#aaa}
+.summary-title{clear:both;margin:10px;border-bottom:solid 1px #000;}
+.exec_spliter{width:100%;margin-top:20px;}
+.exec_spliter .ui-button-text{font-size:.5em;}
+.description{padding:10px;}
+.ui-combobox{
+	position: relative;
+	display: inline-block;
+}
+.ui-autocomplete {
+	max-height: 400px;
+	overflow-y: auto;
+	/* prevent horizontal scrollbar */
+	overflow-x: hidden;
+	/* add padding to account for vertical scrollbar */
+	padding-right: 20px;
+}
+#vakata-contextmenu.jstree-default-context li { _zoom:1;min-height:25px;  }
+#vakata-contextmenu.jstree-default-context a { line-height: 25px; }
+.mini-btn .ui-button-text{padding:1px .5em 0px .5em;}
+.field_action{position: relative;width: 70px;display: inline-block;}
+.clear_field{position: relative;top:-8px;}
+.tpl_field{position: relative;top:-4px;}
+.field_tips_table{width:100%!important;}
+.field_tips_table td{font-size:13px}
+.field_tips_table caption{font-size:13px}
+.history_query .ui-combobox {
+	left:3px;
+	top:5px;
+}
+.ui-combobox .ui-button {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-left: -1px;
+	padding: 0;
+	height: 28px;
+	/* adjust styles for IE 6/7 */
+	*height: 1.7em;
+	*top: 0.1em;
+}
+.history_query .ui-combobox .ui-button{
+	height: 26px;
+}
+.ui-menu .ui-menu-item a {
+	text-decoration:none;
+	display:block;
+	padding: .15em .4em;
+	line-height:1.5;
+	zoom:1;
+}
+.ui-combobox .ui-autocomplete-input {
+	margin: 0;
+	padding: 0.15em;
+	width:250px;
+}
+.uts_query_builder_field_condition{
+	width: 138px;
+}
+.uts_query_builder_field_name{ width:100px;}
+.saved_query_as_db{width: 210px;}
+.spliter_w40{width:40px;display:inline-block;}
+.uts_query_builder_field_value{width: 265px;height:28px;overflow:hidden;padding: 1px 0;}
+.mini-query-builder .uts_query_builder_field_name{width: 40px;}
+.mini-query-builder .ui-corner-right{width: 20px;}
+.mini-query-builder .uts_query_builder_field_condition{width: 80px;}
+.mini-query-builder .uts_query_builder_field_value{width: 60px;}
+.history_query .ui-combobox .ui-autocomplete-input {
+	width:350px;
+	height: 20px;
+}
+.mini-icon .ui-button-text{padding:5px;}
+.jstree-rename-input{height:20px!important}
+#feedback { font-size: 1.4em; }
+.selectable .ui-selecting { background: #FECA40; }
+.selectable .ui-selected { background: #F39814; color: white; }
+.selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+.selectable li { margin: 3px; padding: 0.4em; min-height: 18px; }
+.query_group{
+	list-style-type:upper-alpha;margin:0;
+	margin-left: 8px;
+}
+.query_group_c{background: #f0f0f0!important;}
+.query_group li { margin: 1px; padding: 1px; min-height: 18px; }
+.merge-type-desc{padding-left:16px;}
+.handle{display: inline-block;cursor: move;}
+table.tablesorter tbody .tGroup td {background-color:#F3F3F3;color:#000;}
+#tasks .tablesorter{font-size: .6em}
+.tGroup .item-count {
+	color:#ccc;
+}
+.tGroup .item-count em{
+	color:green;
+	font-weight:bold;
+}
+#field_text_id{font-size: 11px; width: 298px;margin-top: 2px;margin-bottom: 2px;height: 300px;margin-left: 2px;margin-right: 2px;}
+#user_by_file_name{width: 298px;}
+/* tables */
+table.tablesorter {
+	background-color: #CDCDCD;
+	margin:10px 0pt 15px;
+	text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #e6EEEE;
+	border: 1px solid #FFF;
+	font-size: 8pt;
+	padding: 4px;
+	min-width: 50px;
+}
+table.tablesorter thead tr .header {
+	background-image: url(../images/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+	font-family: Verdana,Arial,"微软雅黑"sans-serif;
+}
+table.tablesorter tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(../images/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(../images/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #8dbdd8;
+}

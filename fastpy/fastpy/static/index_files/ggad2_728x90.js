@@ -1,0 +1,18 @@
+document.writeln("<link type=\"text/css\" rel=\"stylesheet\" href=\"http://www.cssmoban.com/statics/css/astyle.css\" />");
+document.writeln("<div align=\"center\">");
+document.writeln("<script type=\"text/javascript\"><!--");
+document.writeln("google_ad_client = \"ca-pub-1542822386688301\";");
+document.writeln("/* cssmoban_728&#42;90 */");
+document.writeln("google_ad_slot = \"6219179346\";");
+document.writeln("google_ad_width = 728;");
+document.writeln("google_ad_height = 90;");
+document.writeln("//-->");
+document.writeln("</script>");
+document.writeln("<script type=\"text/javascript\"");
+document.writeln("src=\"http://pagead2.googlesyndication.com/pagead/show_ads.js\">");
+document.writeln("</script>");
+document.writeln("</div>");
+document.writeln("<script type=\"text/javascript\">");
+document.writeln("var cpro_id = \"u837382\";");
+document.writeln("</script>");
+document.writeln("<script src=\"http://cpro.baidustatic.com/cpro/ui/f.js\" type=\"text/javascript\"></script>");

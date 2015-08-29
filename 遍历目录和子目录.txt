@@ -1,0 +1,17 @@
+def walk_dir(self, path=None):  
+    if path == None:  
+        path =getcwd() #current path  
+    alldir = os.walk(path)  
+    project_name = ""  
+    project_dir_name = ""  
+    for sub_path in alldir:  
+        #print self.get_dir_depth(path, sub_path[0]), sub_path[0]  
+        #print sub_path  
+        if (self.project_root_dir_depth == self.get_dir_depth(path, sub_path[0]) - 1):  
+            project_name = self.get_dir_name(sub_path[0])  
+            project_dir_name = sub_path[0]  
+            #print "project_dir_name:",project_dir_name  
+            #print "project_name:",project_name  
+        for file in sub_path[2]:  
+            self.read_file(sub_path[0]+"\\"+file, project_name, project_dir_name)  
+    return  
