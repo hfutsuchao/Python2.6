@@ -41,9 +41,9 @@ result = open('unRegged','a')
 print dicType[:10]
 sys.exit()
 '''
-
+timer=0
 for dm in totalDic: 
-    for dtype in dicType[:13]:
+    for dtype in dicType[:1]:
         domainName = dm + dtype
         try:
             regResult = ifRegged(domainName)
@@ -54,6 +54,9 @@ for dm in totalDic:
             print domainName + ' unRegged!'
             result.write(domainName + '\t' + 'unRegged!' + '\n') 
         time.sleep(random.random()*1)
-    result.close()
-    time.sleep(3)
-    result = open('unRegged','a')
+        timer = timer + 1
+    if timer == 10:
+        result.close()
+        time.sleep(2)
+        result = open('unRegged','a')
+        timer = 0
