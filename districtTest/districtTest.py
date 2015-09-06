@@ -1,12 +1,12 @@
-#encoding:utf-8
+#coding:utf-8
 import json
-import html
+import requests
 import time
-
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 url = 'http://www.ganji.com/ajax.php?module=streetOptions'
-
-
 
 def getDistrictId(districtName,cityId):
     import GJDB
@@ -33,8 +33,6 @@ def getCityId(cityName):
     return DB.selectData('SELECT city_id FROM city WHERE short_name="'+cityName+'"')[0][0]
 
 
-htmlHandle = html.Html()
-
 streetAddFile = open('newds.txt','r').readlines()
 for streetAdd in streetAddFile[1:]:
     city, district, street = streetAdd.split('-')
@@ -47,7 +45,7 @@ for streetAdd in streetAddFile[1:]:
     except Exception,e:
         print streetAdd[:-1],'no data',e
         continue
-    result = json.loads(htmlHandle.post(url,data,''))
+    result = json.loads(requests.post(url,data).text)
     for i in result:
         tmp = 1
         tmpArr = []

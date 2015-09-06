@@ -1,44 +1,52 @@
 ﻿#coding=utf-8  
-  
-Class Email():
-    import smtplib,email,sys  
-    from email.Message import Message  
+import smtplib,email,sys  
+from email.Message import Message
 
-    def __init__():
-        smtpserver='smtp.163.com'  
-        smtpuser='hfutsuchao@163.com'  
-        smtppass=''  
-        smtpport='25'  
-  
-    def connect():  
+class Email:
+    
+    smtpserver='smtp.163.com'  
+    smtpuser='hfutsuchao@163.com'  
+    smtppass=''  
+    smtpport='25'
+    to='18600219332@qq.com'  
+    server=''
+    subj=''
+    content=''
+    frm=''
+
+    def __init__(self,sender='hfutsuchao@163.com',smtpserver='smtp.163.com',password=''):
+        self.smtpserver=smtpserver
+        self.smtpuser=sender
+        self.smtppass=password
+        self.connect()
+
+    def connect(self):  
         "connect to smtp server and return a smtplib.SMTP instance object"  
-        server=smtplib.SMTP(smtpserver,smtpport)  
-        server.ehlo()  
-        server.login(smtpuser,smtppass)  
-        return server  
+        self.server=smtplib.SMTP(self.smtpserver,self.smtpport)
+        self.server.ehlo()  
+        self.server.login(self.smtpuser,self.smtppass)
           
-    def sendmessage(server,subj,content,to,frm=''): 
+    def sendEmail(self,subj=subj,content=content,to=to,frm=frm): 
+        print subj,content
         #"using server send a email"
         msg = Message()  
         msg['Mime-Version']='1.0'  
         if frm == '':
-            msg['From'] = smtpuser
+            msg['From'] = self.smtpuser
         else:  
             msg['From'] = frm
         msg['To'] = to  
         msg['Subject'] = subj  
-        # curr datetime, rfc2822
-        msg['Date'] = email.Utils.formatdate()
+        msg['Date'] = email.Utils.formatdate()          # curr datetime, rfc2822  
         msg.set_payload(content)
         try:
-            failed = server.sendmail(msg['From'],msg['To'],str(msg))  
-            # may also raise exc  
+            failed = self.server.sendmail(msg['From'],msg['To'],str(msg))   # may also raise exc  
             print "send success! OK!"  
         except Exception ,ex:
             print Exception,ex  
             print 'Error - send failed'
 
-    def getSummary():
+    def getSummary(self):
         '''
         frm=raw_input('From: ').strip()  
         to=raw_input('To: ').strip()  
@@ -48,13 +56,8 @@ Class Email():
         while True:
             line = sys.stdin.readline()  
             if line == '. ': break  
-            text += line
-        return text
+            self.text += line
 
 if __name__=="__main__":     
-    mail = Class()
-    to='814155356@qq.com'  
-    subj='test'  
-    text = 'test'
-    server=connect()
-    sendmessage(server,subj,text,to)
+    myMail = Email()
+    myMail.sendEmail('subj','content','814155356@qq.com')
