@@ -1,15 +1,13 @@
 # coding:gbk
 import time,sys
-from commonFunction import dateToday,sleep
-import html
-
-htmlHandle = html.Html()
+from commfunction import today,sleep
+import requests
 
 #{{{ download the day picture
 def downloadFenshi(stockNum):
-    global htmlHandle
     imageUrl = 'http://image.sinajs.cn/newchart/v5/usstock/wap/min_daily/226/'+ stockNum + '.gif'
-    return htmlHandle.download(imageUrl,'fenshi/'+stockNum+dateToday()+'.gif')
+    print imageUrl
+    return requests.get(imageUrl,'fenshi/'+stockNum+today()+'.gif')
 #}}}
 
 if __name__ == '__main__':

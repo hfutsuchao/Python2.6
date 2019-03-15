@@ -9,8 +9,8 @@ sys.setdefaultencoding('utf8')
 
 myMail = Email(password='814155356')
 
-urlLists = open('/Users/NealSu/KuaiPan/MyTools/Python2.6/tools/cityXiaoqu.txt','r').readlines()
-result = open('/Users/NealSu/KuaiPan/MyTools/Python2.6/tools/result.txt','r').readlines()
+urlLists = open('/Users/NealSu/GoogleDisk/MyTools/Python2.6/tools/cityXiaoqu.txt','r').readlines()
+result = open('/Users/NealSu/GoogleDisk/MyTools/Python2.6/tools/result.txt','r').readlines()
 
 #already published
 dicLastUrl = {}
@@ -19,7 +19,7 @@ for i in result:
 
 cats = ['fang1']
 
-result = open('/Users/NealSu/KuaiPan/MyTools/Python2.6/tools/result.txt','w')
+result = open('/Users/NealSu/GoogleDisk/MyTools/Python2.6/tools/result.txt','w')
 
 for i, line in enumerate(urlLists):
     try:
@@ -33,9 +33,10 @@ for i, line in enumerate(urlLists):
     for cat in cats:
         try:
             url = 'http://' + city + '.ganji.com/' + cat + '/a1b4000e5500h3m1/_' + urlencode({'':keyword}).split('=')[1] + '/'
+            print url
             html = BeautifulSoup(requests.get(url).text)
-            house = html.findAll('div', {'class':'list-mod4'})[0]
-            elm = house.findAll('div', {'class':'info-title'})
+            house = html.findAll('div', {'class':'f-list-item'})[0]
+            elm = house.findAll('div', {'class':'dd-item title'})
             title = dict(elm[0].a.attrs)['title']
             href = 'http://' + city + '.ganji.com' + dict(elm[0].a.attrs)['href']
 

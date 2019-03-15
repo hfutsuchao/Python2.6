@@ -10,9 +10,9 @@ month = t.month
 day = t .day
 # print month,day
 
-patt = 'www\.fenxs\.com\/\d+\.html" \S+ ' + str(month) + '\S\S\S' + str(day) + '\S\S\S'
+patt = 'www\.fenxs\.com\/\d+\.html".*?' + str(month) + '.*?' + str(day)
 
-# print patt
+#print patt
 url = 'http://www.fenxs.com/'
 
 try:

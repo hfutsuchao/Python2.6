@@ -23,10 +23,10 @@ for py in pinyinFile[1:-1]:
     py = py[:-2]
     dic[1].append(py) 
     totalDic.append(py) 
-    for py2 in pinyinFile:
-        py2 = py2[:-2]
-        dic[2].append(py+py2)
-        totalDic.append(py+py2)
+    '''for py2 in pinyinFile:
+                    py2 = py2[:-2]
+                    dic[2].append(py+py2)
+                    totalDic.append(py+py2)'''
 '''        for py3 in pinyinFile:
             py3 = py3[:-1]
             dic[3].append(py+py2+py3)
@@ -46,6 +46,7 @@ for dm in totalDic:
     for dtype in dicType[:1]:
         domainName = dm + dtype
         try:
+            print domainName
             regResult = ifRegged(domainName)
         except Exception,e:
             print domainName,e
@@ -55,7 +56,7 @@ for dm in totalDic:
             result.write(domainName + '\t' + 'unRegged!' + '\n') 
         time.sleep(random.random()*1)
         timer = timer + 1
-    if timer == 10:
+    if timer == 20:
         result.close()
         time.sleep(2)
         result = open('unRegged','a')
